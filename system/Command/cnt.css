@@ -16,3 +16,24 @@ body{
     display: flex;
     justify-content: center;
 }
+.windows{
+    width: 827px;
+	height: 350px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    position: relative;
+}
+.windows iframe{
+    width: 827px;
+	height: 350px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+body {
+	margin:0px;
+	padding:0px;
+	color:#fff;
+	font:"微软雅黑";
+	font-size:14px;
+}
+.window {
+	border:6px #ccc outset;
+	width:800px;
+	height:500px;
+	background-color:#000;
+	position:absolute;
+	overflow:hidden
+}	
+.title {
+	background-color:#08246B;
+	padding:2px;
+}
+ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
