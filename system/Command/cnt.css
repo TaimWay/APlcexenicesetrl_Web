@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+.title {
+    text-align: center;
+    color: #fff;
+}
+.Copyright{
+    text-align: center;
+    color: #fff;
+}
+.message{
+    color: red;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
