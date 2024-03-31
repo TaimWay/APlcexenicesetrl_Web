@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>测试文档</title>
+        
+		<script>
+			function check(){
+                document.getElementById('cash').style.display='inline';
+				document.getElementById('cash').style.animation='cash'+' '+3+'s';
+			}
+		</script>
+		<style>
+			@keyframes cash{
+				0%{
+					stroke-dasharray:1,200;
+				}
+				100%{
+					stroke-dasharray:125,200;
+				}
+			}
+			.cash{
+				fill:none;
+				stroke:#17f700;
+				stroke-width:10;
+				stroke-linecap:round;
+				stroke-dasharray:125;
+				stroke-dashoffset:0;
+				
+			}
+		</style>
+        <style>
+            /*Reboot Testing - CSS Code*/
+            .borld{
+                border: 1px solid #666;
+                background-color: #fff;
+                width: 300px;
+                height: 60px;
+                border-radius: 10px 10px 10px 10px;
+                display: flex;
+            }
+            .cash-box{
+                width: 40px;
+                height: 40px;
+                border: 1px solid #666;
+                border-radius: 5px 5px 5px 5px;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            .cash-svg{
+                margin-left: -7px;
+                margin-top: 5px;
+            }
+            svg{
+                margin-left: -25px;
+                margin-top: -10px;
+                transform: scale(0.8);
+            }
+            .img{
+                width: 50px;
+                height: 50px;
+                transform: translateX(5px);
+            }
+            img{
+                transform: translateY(7px);
+            }
+            .text-box{
+                display: flex;
+            }
+            .text{
+                display: flex;
+                transform: translateX(15px);
+            }
+            .text-h{
+                transform: translateY(-14px);
+            }
+        </style>
+	</head>
+	<body style="background:#fff">
+        
+        <div class="reboot-test" style="height: 70px;">
+            <div class="winbox">
+                <div class="borld">
+                    <div class="cash-box" onclick="check()">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 130;height:90px" class="svg">
+                            <polyline id="cash" class="cash" points="25 25,40 40,60,10" style="display:none;"></polyline>
+                        </svg>
+                    </div>
+                    <div class="text-box">
+                        <div class="img">
+                            <img src="/system/Resources/img/APlcexenicesetrl Icon.png" alt="[ERROR]" width="50" height="50">
+                        </div>
+                        <div class="text">
+                            <h1 class="text-h">人机验证</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        
+	</body>
+</html>

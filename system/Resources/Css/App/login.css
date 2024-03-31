@@ -142,7 +142,23 @@ section .color:nth-child(3){
     width: 80px;
     height: 4px;
     background: #fff;
+    animation: h2before 4s linear infinite;
 }
+@keyframes h2before {
+    0%{
+        width: 2px;
+    }
+    40%{
+        width: 80px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 2px;
+    }
+}
+
 .form .inputBox{
     width: 100%;
     margin-top: 20px;
@@ -180,4 +196,32 @@ section .color:nth-child(3){
 }
 .more{
     display: flex;
+}
+.forge-passwork{
+    display: flex;
+    margin-left: auto;
+}
+.message{
+    color:#fff;
+    font-weight: 600;
+}
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+
+    margin-right: 2px;
+    margin-top: 4px;
+
+    
+}
+
+
+
+.reboot-testing{
+    height: 40px;
+}
+.reboot-testing .windows-box{
+    transition: 1s;
+    margin-top: 20px;
+    
 }

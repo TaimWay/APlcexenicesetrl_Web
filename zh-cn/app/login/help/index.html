@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en" style="font-size: 44.44444px">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>操作指导</title>
+		<style>
+			.bg {
+				width: 100%;
+				background: #fff;
+			}
+
+			span {
+				display: inline-block;
+				background-image: url(static/demostration.png);
+				background-repeat: no-repeat;
+			}
+
+			.select {
+				background-color: #4385d8 !important;
+				color: #fff !important;
+			}
+
+			.arrow,
+			.no-arrow {
+				background-color: #fff;
+				color: #4385d8;
+				border: 1px solid #4385d8;
+				cursor: pointer;
+			}
+
+			.display {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.bottom {
+				text-align: center;
+			}
+
+			.powered {
+				color: #ccc;
+				position: relative;
+			}
+
+			.page-close {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 40px;
+				height: 40px;
+				background: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' fill='%23CCC'%3E%3Cpath d='M566.976 521.097l289.907-289.908c14.634-14.633 14.634-38.76 0-53.393l-1.582-1.582c-14.634-14.634-38.76-14.634-53.394 0L512 466.517 222.093 176.214c-14.634-14.634-38.76-14.634-53.394 0l-1.582 1.582c-15.03 14.634-15.03 38.76 0 53.393l289.907 289.908-289.907 289.907c-14.634 14.634-14.634 38.76 0 53.393l1.582 1.582c14.634 14.634 38.76 14.634 53.394 0L512 576.072 801.907 865.98c14.634 14.634 38.76 14.634 53.394 0l1.582-1.582c14.634-14.633 14.634-38.76 0-53.393L566.976 521.097z'/%3E%3C/svg%3E") no-repeat center;
+				cursor: pointer;
+			}
+
+			a {
+				text-decoration: none;
+			}
+			a:visited {
+				color: #535353;
+			}
+
+			.v {
+				color: #00a3d8;
+			}
+
+			html,
+			body {
+				width: 100%;
+				background-color: #fff;
+				padding: 0;
+				margin: 0;
+			}
+
+			.container {
+				width: 100%;
+			}
+
+			.top {
+				text-align: center;
+				max-width: 8rem;
+				min-width: 8rem;
+				padding-top: 0.5rem;
+				margin: 0 auto;
+			}
+
+			.part-title {
+				height: 0.9rem;
+				width: 80%;
+				background-size: 100%;
+				background-position: 0 0;
+			}
+
+			.part-play {
+				position: absolute;
+				top: 5rem;
+				margin: auto;
+				left: 0;
+				right: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-position: 0 -1.25rem;
+				z-index: 2000;
+				cursor: pointer;
+				border-radius: 100%;
+				box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+			}
+			.mp4 {
+				height: 7rem;
+				width: 75%;
+				margin: auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				outline: none;
+				overflow: hidden;
+			}
+
+			.mp4 video:focus {
+				outline: none;
+			}
+
+			.part-arrow {
+				width: 0.35rem;
+				height: 0.35rem;
+			}
+
+			.part-arrow-blue {
+				display: none;
+				background-position: 0 -2.88rem;
+			}
+
+			.part-arrow-blue-break {
+				background-position: 0 -3.69rem;
+			}
+
+			.part-arrow-white {
+				margin-top: 0.06rem;
+				background-position: 0 -3.31rem;
+			}
+
+			.part-arrow-white-break {
+				display: none;
+				margin-top: 0.06rem;
+				background-position: 0 -4.1rem;
+			}
+
+			.button {
+				padding: 0.5rem 0;
+			}
+
+			.arrow,
+			.no-arrow {
+				height: 1rem;
+				width: 3.1rem;
+				margin: 0 0.2rem;
+				font-size: 0.33rem;
+				border-radius: 0.06rem;
+			}
+
+			.bottom {
+				font-size: 0.33rem;
+				line-height: 40px;
+				/*padding: 0 0 0.07rem 0;*/
+				background-color: #f8f8fd;
+			}
+
+			.ads {
+				height: 100px;
+				text-align: center;
+			}
+		</style>
+		<script>
+			var _hmt = _hmt || [];
+			(function () {
+				var hm = document.createElement('script');
+				hm.src = 'https://hm.baidu.com/hm.js?2cceda090973bf931f95867d09113b24';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+			(function () {
+				var bp = document.createElement('script');
+				var curProtocol = window.location.protocol.split(':')[0];
+				if (curProtocol === 'https') {
+					bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+				} else {
+					bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+				}
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(bp, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<a href="https://tongji.baidu.com/web/welcome/ico?s=2cceda090973bf931f95867d09113b24" target="_blank" style="display: block; position: fixed; left: 0; top: 0; width: 20px; height: 20px; z-index: 10;"></a>
+		<div>
+			<div id="content" class="container" style="height: calc(100vh - 100px)">
+				<!--				<div id="bottomUrl" class="bottom">-->
+				<!--					<div class="powered">-->
+				<!--						由 <a href="https://www.vaptcha.com/" target="_blank"> <text class="v">V</text>APTCHA</a>提供技术支持-->
+				<!--						<div class="page-close"></div>-->
+				<!--					</div>-->
+				<!--				</div>-->
+				<div id="bottomText" class="bottom powered">
+					<div>Easy on humans ,Impossible on bots！</div>
+				</div>
+				<div class="bg" id="bg">
+					<div class="top">
+						<text style="font-size: 30px">如何验证</text>
+						<!--            <span class="part-title"></span>-->
+						<span id="play" class="part-play" onclick="playPause()"></span>
+						<div class="mp4">
+							<video id="myVideo" poster="static/vediocover.jpg" controls360="no" preload="none" style="outline: none; width: 100%; object-fit: fill">
+								<source src="https://r.vaptcha.net/static/arrow.mp4" type="video/mp4" />
+							</video>
+						</div>
+						<div class="button display" id="operation">
+							<div id="arrow" class="display arrow select" onclick="setArrow()">
+								<span id="whiteArrow" class="part-arrow-white part-arrow"></span>
+								<span id="blueArrow" class="part-arrow-blue part-arrow"></span>
+								<div>Arrow</div>
+							</div>
+							<div id="noArrow" class="display no-arrow" onclick="setNoArrow()">
+								<span id="blueBreak" class="part-arrow-blue-break part-arrow"></span>
+								<span id="whiteBreak" class="part-arrow-white-break part-arrow"></span>
+								<div>No-Arrow</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<!--			<div>-->
+<!--				<a href="https://mi.vaptcha.net/howtoverify.png"></a>-->
+<!--			</div>-->
+
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- 操作演示新广告单元   background: #002040 -->
+			<div style="left: 0; right: 0; margin: auto; width: 100%; height: 100px">
+				<ins class="adsbygoogle" style="display: inline-block; width: 100%; height: 100px" data-ad-client="ca-pub-9815641904133640" data-ad-slot="7258547185"></ins>
+			</div>
+			<script>
+				if (self === top) (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<script>
+			// 获取屏幕高度
+			// autoDivSize();
+			getQueryVariable();
+
+			function autoDivSize() {
+				//函数：获取尺寸
+				// 获取窗口宽度
+				if (window.innerWidth) {
+					winWidth = window.innerWidth;
+				} else if (document.body && document.body.clientWidth) {
+					winWidth = document.body.clientWidth;
+				}
+				// 获取窗口高度
+				if (window.innerHeight) {
+					winHeight = window.innerHeight;
+				} else if (document.body && document.body.clientHeight) {
+					winHeight = document.body.clientHeight;
+				}
+				// 通过深入 Document 内部对 body 进行检测，获取窗口大小
+				if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+					winHeight = document.documentElement.clientHeight;
+					winWidth = document.documentElement.clientWidth;
+				}
+				if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+					bodyTag = document.getElementsByTagName('body')[0];
+					bodyTag.style.height = (document.documentElement.clientWidth / screen.width) * screen.height + 'px';
+				}
+				//DIV高度为浏览器窗口高度 的60%
+				document.getElementById('content').style.height = winHeight * 1 - 100 + 'px';
+			}
+
+			window.onresize = autoDivSize; //浏览器窗口发生变化时同时变化DIV高度
+
+			//获取url参数
+			function getQueryVariable() {
+				var query = window.location.search.substring(1);
+				var vars = query.split('&');
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split('=');
+					if (pair[1] >= 1) {
+						// document.getElementById('bottomUrl').style.display = 'none';
+						document.getElementById('bottomText').style.display = 'block';
+					} else {
+						// document.getElementById('bottomUrl').style.display = 'block';
+						document.getElementById('bottomText').style.display = 'none';
+					}
+				}
+			}
+
+			// document.getElementsByClassName('page-close')[0].onclick = function () {
+			// 	setTimeout(() => {
+			// 		history.back();
+			// 	}, 100);
+			// 	setTimeout(() => {
+			// 		window.close();
+			// 	}, 200);
+			// };
+
+			var myVideo = document.getElementById('myVideo');
+			if (isChi()) myVideo.innerHTML = "<source src='https://r.vaptcha.net/static/arrow.mp4' type='video/mp4' />";
+			else myVideo.innerHTML = "<source src='https://ui.vaptcha.net/static/arrow.mp4' type='video/mp4' />";
+
+			function playPause() {
+				if (myVideo.paused) {
+					myVideo.poster = '';
+					myVideo.play();
+					document.getElementById('play').style.display = 'none';
+				} else {
+					myVideo.poster = 'static/vediocover.jpg';
+					myVideo.pause();
+					document.getElementById('play').style.display = 'block';
+				}
+			}
+
+			myVideo.addEventListener(
+				'ended',
+				function () {
+					myVideo.poster = 'static/vediocover.jpg';
+					document.getElementById('play').style.display = 'block';
+				},
+				false
+			);
+
+			function setArrow() {
+				myVideo.poster = 'static/vediocover.jpg';
+				document.getElementById('arrow').classList.add('select');
+				document.getElementById('noArrow').classList.remove('select');
+				document.getElementById('play').style.display = 'block';
+				document.getElementById('myVideo').src = isChi() ? 'https://r.vaptcha.net/static/arrow.mp4' : 'https://ui.vaptcha.net/static/arrow.mp4';
+				document.getElementById('whiteBreak').style.display = 'none';
+				document.getElementById('blueArrow').style.display = 'none';
+				document.getElementById('whiteArrow').style.display = 'block';
+				document.getElementById('blueBreak').style.display = 'block';
+			}
+
+			function setNoArrow() {
+				myVideo.poster = 'static/vediocover.jpg';
+				document.getElementById('arrow').classList.remove('select');
+				document.getElementById('noArrow').classList.add('select');
+				document.getElementById('play').style.display = 'block';
+				document.getElementById('myVideo').src = isChi() ? 'https://r.vaptcha.net/static/no-arrow.mp4' : 'https://ui.vaptcha.net/static/no-arrow.mp4';
+				document.getElementById('whiteBreak').style.display = 'block';
+				document.getElementById('blueArrow').style.display = 'block';
+				document.getElementById('whiteArrow').style.display = 'none';
+				document.getElementById('blueBreak').style.display = 'none';
+			}
+
+			function isChi() {
+				var lang = navigator.language || navigator.userLanguage; //获取浏览器默认语言。
+				lang = lang.toLowerCase();
+				// 中文简体
+				if (lang === 'zh-cn') {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>
